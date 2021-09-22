@@ -62,6 +62,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     flex-basis: 700px;
+    flex-grow: 10;
   }
   
   .card-container div {
