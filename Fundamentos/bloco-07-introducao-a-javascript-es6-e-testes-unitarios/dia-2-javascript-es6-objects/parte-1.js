@@ -58,8 +58,9 @@ Complete a função orderModifier() para que seu retorno seja similar a "Olá Lu
 const orderModifier = (order) => {
   const pizzas = Object.keys(order.order.pizza);
   const coca = order.order.drinks.coke.type;
+  const total = order.payment.total;
 
-  console.log(`Olá Luiz Silva, o total do seu pedido de ${pizzas[0]}, ${pizzas[1]} e ${coca} é R$ 50,00.`)
+  console.log(`Olá Luiz Silva, o total do seu pedido de ${pizzas[0]}, ${pizzas[1]} e ${coca} é R$ ${total}.`)
 }
 
 orderModifier(order);
