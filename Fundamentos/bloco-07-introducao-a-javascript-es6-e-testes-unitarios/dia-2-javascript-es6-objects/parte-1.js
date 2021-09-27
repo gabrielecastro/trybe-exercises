@@ -70,3 +70,5 @@ order.name = 'Gabriele Castro';
 console.log(order);
 
 /* Modifique o valor total da compra para R$ 50,00.  */
+order.payment.total = 50;
+console.log(order);
