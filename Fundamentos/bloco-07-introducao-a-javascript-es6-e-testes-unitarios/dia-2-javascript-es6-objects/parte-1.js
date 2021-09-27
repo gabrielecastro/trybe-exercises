@@ -34,6 +34,11 @@ const order = {
   },
 };
 
+/* Exercício 1
+Complete a função customerInfo() para que seu retorno seja similar a "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701".
+Note que o parâmetro da função já está sendo passado na chamada da função.
+ */
+
 const customerInfo = (order) => {
   const deliveryPerson = order.order.delivery.deliveryPerson;
   const name = order.name;
@@ -47,6 +52,9 @@ const customerInfo = (order) => {
 
 customerInfo(order);
 
+/* Exercício 2
+Complete a função orderModifier() para que seu retorno seja similar a "Olá Luiz Silva, o total do seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ 50,00." */
+
 const orderModifier = (order) => {
   const pizzas = Object.keys(order.order.pizza);
   const coca = order.order.drinks.coke.type;
@@ -56,15 +64,9 @@ const orderModifier = (order) => {
 
 orderModifier(order);
 
+/* Modifique o nome da pessoa compradora. */
 
+order.name = 'Gabriele Castro';
+console.log(order);
 
-
-/* Exercício 1
-Complete a função customerInfo() para que seu retorno seja similar a "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701".
-Note que o parâmetro da função já está sendo passado na chamada da função.
-
-Exercício 2
-Complete a função orderModifier() para que seu retorno seja similar a "Olá Luiz Silva, o total do seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ 50,00."
-
-Modifique o nome da pessoa compradora.
-Modifique o valor total da compra para R$ 50,00. */
+/* Modifique o valor total da compra para R$ 50,00.  */
