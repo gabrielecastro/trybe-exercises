@@ -36,3 +36,8 @@ console.log(listKeysObject(lesson1));
 const sizeObject = (object) => Object.keys(object).length;
 console.log(sizeObject(lesson3));
 
+// 4 - Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro.
+
+const valuesObject = (object) => Object.values(object);
+console.log(valuesObject(lesson1));
+
