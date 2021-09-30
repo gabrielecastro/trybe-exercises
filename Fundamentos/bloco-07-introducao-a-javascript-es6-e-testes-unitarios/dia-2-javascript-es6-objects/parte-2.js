@@ -41,3 +41,4 @@ console.log(sizeObject(lesson3));
 const valuesObject = (object) => Object.values(object);
 console.log(valuesObject(lesson1));
 
+
