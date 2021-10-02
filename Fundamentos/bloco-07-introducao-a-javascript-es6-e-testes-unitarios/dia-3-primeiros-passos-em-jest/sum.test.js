@@ -1,5 +1,5 @@
 const { it, expect } = require('@jest/globals');
-const {sum, myRemove} = require('./sum');
+const {sum, myRemove, myFizzBuzz} = require('./sum');
 
 /* 1 - A função sum(a, b) retorna a soma do parâmetro a com o b
 Teste se o retorno de sum(4, 5) é 9
@@ -44,4 +44,21 @@ describe('The function sum', () => {
     it('verifica se a chamada myRemove([1, 2, 3, 4], 3) não retorna o array [1, 2, 3, 4]', () => {
       expect(myRemove([1, 2, 3, 4], 5)).toEqual([ 1, 2, 3, 4 ]);
     });
+});
+
+/* 3 - A função myFizzBuzz(num) recebe um número num e retorna "fizzbuzz" se o número for divisível por 3 e 5 , retorna "fizz" se for divisível apenas por 3 , retorna "buzz" se divisível apenas por 5 , retorna o próprio número caso não seja divisível por 3 ou 5 e retorna false caso num não seja um número 
+Faça uma chamada com um número divisível por 3 e 5 e verifique se o retorno é o esperado
+Faça uma chamada com um número divisível por 3 e verifique se o retorno é o esperado
+Faça uma chamada com um número divisível por 5 e verifique se o retorno é o esperado
+Faça uma chamada com um número que não é divisível por 3 ou 5 e verifique se o retorno é o esperado
+Faça uma chamada com um parâmetro que não é um número e verifique se o retorno é o esperado */
+
+describe('The function myFizzBuzz', () => { 
+  it('verifica se o retorno é o esperado', () => { 
+    expect(myFizzBuzz(15)).toBe('fizzbuzz');
+    expect(myFizzBuzz(9)).toBe('fizz');
+    expect(myFizzBuzz(10)).toBe('buzz');
+    expect(myFizzBuzz(11)).toBe(11);
+    expect(myFizzBuzz('3')).toBe(false);
+  });
 });
