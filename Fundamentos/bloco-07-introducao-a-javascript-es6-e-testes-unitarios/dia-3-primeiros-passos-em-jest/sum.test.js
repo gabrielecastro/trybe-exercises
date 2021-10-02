@@ -1,5 +1,5 @@
 const { it, expect } = require('@jest/globals');
-const {sum, myRemove, myFizzBuzz} = require('./sum');
+const {sum, myRemove, myFizzBuzz, encode, decode} = require('./sum');
 
 /* 1 - A função sum(a, b) retorna a soma do parâmetro a com o b
 Teste se o retorno de sum(4, 5) é 9
@@ -62,3 +62,71 @@ describe('The function myFizzBuzz', () => {
     expect(myFizzBuzz('3')).toBe(false);
   });
 });
+
+/* 4 - Para as funções encode e decode crie os seguintes testes em Jest:
+Teste se encode e decode são funções;
+Para a função encode teste se as vogais a, e, i, o, u são convertidas em 1, 2, 3, 4 e 5, respectivamente;
+Para a função decode teste se os números 1, 2, 3, 4 e 5 são convertidos nas vogais a, e, i, o, u , respectivamente;
+Teste se as demais letras/números não são convertidos para cada caso;
+Teste se a string que é retornada pelas funções têm o mesmo número de caracteres que a string passada como parâmetro. */
+
+describe('The function encode', () => { 
+  it ('testa se encode é uma função', () => {
+    expect(typeof encode).toBe('function')
+  });
+
+  it('testa se a vogal "a" é convertida no número 1', () => { 
+    expect(encode('ana')).toBe('1n1');
+  });
+
+  it('testa se a vogal "e" é convertida no número 2', () => { 
+    expect(encode('elen')).toBe('2l2n');
+  });
+
+  it('testa se a vogal "i" é convertida no número 3', () => { 
+    expect(encode('ingrid')).toBe('3ngr3d');
+  });
+
+  it('testa se a vogal "o" é convertida no número 4', () => { 
+    expect(encode('ola')).toBe('4l1');
+  });
+
+  it('testa se a vogal "u" é convertida no número 5', () => { 
+    expect(encode('uva')).toBe('5v1');
+  });
+
+  it('testa se a string que é retornada pela função têm o mesmo número de caracteres que a string passada como parâmetro', () => { 
+    expect(encode('trybe').length).toEqual(5);
+  });
+});
+
+describe('The function decode', () => { 
+  it ('testa se decode é uma função', () => {
+    expect(typeof decode).toBe('function')
+  });
+
+  it('testa se o número 1 é convertido na vogal "a"', () => { 
+    expect(decode('1n1')).toBe('ana');
+  });
+
+  it('testa se o número 2 é convertido na vogal "e"', () => { 
+    expect(decode('2l2n')).toBe('elen');
+  });
+
+  it('testa se o número 3 é convertido na vogal "i"', () => { 
+    expect(decode('3ngr3d')).toBe('ingrid');
+  });
+
+  it('testa se o número 4 é convertido na vogal "o"', () => { 
+    expect(decode('4l1')).toBe('ola');
+  });
+
+  it('testa se o número 5 é convertido na vogal "u"', () => { 
+    expect(decode('5v1')).toBe('uva');
+  });
+
+  it('testa se a string que é retornada pela função têm o mesmo número de caracteres que a string passada como parâmetro', () => { 
+    expect(decode('3ngr3d').length).toEqual(6);
+  });
+});
+

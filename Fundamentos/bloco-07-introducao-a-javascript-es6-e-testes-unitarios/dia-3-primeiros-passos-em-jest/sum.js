@@ -24,4 +24,58 @@ function myFizzBuzz(num) {
   return num;
 }
 
-module.exports = {sum, myRemove, myFizzBuzz};
+function encode(string) {
+  let stringCodificada = '';
+  for (let i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case 'a':
+        stringCodificada += '1';
+        break;
+      case 'e':
+        stringCodificada += '2';
+        break;
+      case 'i':
+        stringCodificada += '3';
+        break;
+      case 'o':
+        stringCodificada += '4';
+        break;
+      case 'u':
+        stringCodificada += '5';
+        break;
+      default:
+        stringCodificada += string[i]; 
+    }
+  } 
+    return stringCodificada;
+}
+  
+function decode(string) {
+  let stringDecodificada = '';
+  for (let i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case '1':
+        stringDecodificada += 'a';
+        break;
+      case '2':
+        stringDecodificada += 'e';
+        break;
+      case '3':
+        stringDecodificada += 'i';
+        break;
+      case '4':
+        stringDecodificada += 'o';
+        break;
+      case '5':
+        stringDecodificada += 'u';
+        break;
+      default:
+        stringDecodificada += string[i]; 
+    }
+  } 
+    return stringDecodificada;
+}
+
+console.log(encode('uva'));
+
+module.exports = {sum, myRemove, myFizzBuzz, encode, decode};
