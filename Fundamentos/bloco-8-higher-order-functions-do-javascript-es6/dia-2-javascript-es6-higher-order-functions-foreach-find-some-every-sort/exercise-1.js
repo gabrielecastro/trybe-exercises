@@ -70,3 +70,4 @@ function authorBornIn1947() {
 }
 
 assert.strictEqual(authorBornIn1947(), 'Stephen King');
+
