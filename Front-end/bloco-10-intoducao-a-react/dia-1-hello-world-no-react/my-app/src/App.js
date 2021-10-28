@@ -1,19 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import React, {Component} from 'react';
+import Content from './Content';
+import Footer from './Footer';
 
-const Task = (value) => {
-  return (
-    <li>{value}</li>
-  );
-}
+class App extends Component {
+  render() {
 
-const tarefas = ['estudar', 'fazer almoço', 'ler']
-
-function App() {
-  return (
-    <ul>{tarefas.map((tarefa) => Task(tarefa))}</ul>
-    
-  );
+    return (
+      <>
+      <Header />
+      <Content />
+      <Footer />
+      </>
+    )
+  }
 }
 
 export default App;
