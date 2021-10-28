@@ -30,7 +30,7 @@ class Content extends React.Component {
       
       <div>
         {conteudos.map((elem) => (
-          <div key={elem.conteudo}>
+          <div key={elem.conteudo} className='conteudo'>
           <h4>{`O conteúdo é: ${elem.conteudo}`}</h4>
           <p>{`Status: ${elem.status}`}</p>
           <p>{`Bloco: ${elem.bloco}`}</p>
