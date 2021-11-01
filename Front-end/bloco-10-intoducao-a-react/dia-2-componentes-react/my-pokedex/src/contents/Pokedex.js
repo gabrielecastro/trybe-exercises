@@ -4,8 +4,9 @@ import Pokemon from './Pokemon';
 
 class Pokedex extends Component {
   render() { 
-    return <div>
+    return <ul>
       {pokemons.map((pokemon) => (
+        <li className='pokemon'>
         <Pokemon 
           key={pokemon.name}
           nome={ pokemon.name }
@@ -13,9 +14,10 @@ class Pokedex extends Component {
           peso= {`Peso: ${pokemon.averageWeight.value} ${pokemon.averageWeight.measurementUnit}`}
           imagem={ pokemon.image }
         />
+        </li>
       ))}
       
-    </div>;
+    </ul>;
   }
 }
  
