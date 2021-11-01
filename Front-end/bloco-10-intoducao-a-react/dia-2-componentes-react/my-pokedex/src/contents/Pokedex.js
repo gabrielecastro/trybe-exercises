@@ -7,6 +7,7 @@ class Pokedex extends Component {
     return <div>
       {pokemons.map((pokemon) => (
         <Pokemon 
+          key={pokemon.name}
           nome={ pokemon.name }
           tipo={`Tipo: ${ pokemon.type }`}
           peso= {`Peso: ${pokemon.averageWeight.value} ${pokemon.averageWeight.measurementUnit}`}
