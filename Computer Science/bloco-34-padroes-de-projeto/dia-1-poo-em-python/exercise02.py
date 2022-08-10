@@ -23,3 +23,4 @@ class Estatistica:
     def calcula_moda(self, lista):
         self.moda = statistics.mode(lista)
         return self.moda
+        

@@ -44,3 +44,4 @@ class Circulo(Figura_Geometrica):
 
     def perimetro(self):
         return 2 * PI * self.raio
+        
